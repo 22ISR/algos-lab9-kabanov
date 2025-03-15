@@ -160,3 +160,40 @@ _Так как buttonFrame находится внутри `pack` дисплея
 > Приведите калькулятор к следующему виду
 
 ![Пример](./.repo/images/example-1.png)
+
+
+"""
+TASK 1
+"""
+import tkinter as tk
+root = tk.Tk()
+root.title("My programm ZZ")
+root.geometry("800x500")
+label = tk.label(root, text="Hello World!", font="Arial, 16")
+label.pack(padx=20, pady=20)
+textbox = tk.Entry(root, "Arial", 16)
+textbox.pack(padx=20, pady=20)
+root.mainloop()
+
+
+"""
+TASK 2
+"""
+button_content = ['1','2','3','4','5','6','7','8','9','0','Wipe','=','+','-','*',':']
+root = tk.tk()
+root.title("Calc")
+root.geometry("800x500")
+
+label = tk.label(root, text="Очень крутой калькулятр", font=("Arial", 12))
+label.pack(padx=20, pady=20)
+textbox = tk.Text(root, height=3, font=("Arial", 16))
+textbox.pack(padx=1, padx=2)
+
+buttonFrame = tk.Frame(root)
+buttonFrame.columnconfigure(0, weight=1)
+buttonFrame.columnconfigure(1, weight=1)
+buttonFrame.columnconfigure(2, weight=1)
+buttonFrame.columnconfigure(3, weight=1)
+
+
+root.mainloop()
